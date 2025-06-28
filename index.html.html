@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dulce del Día 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #f9e1e9, #fbeff2);
+      font-family: 'Playfair Display', serif;
+      color: #5a2a41;
+      text-align: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.8em;
+      margin-bottom: 10px;
+      color: #c94f7c;
+      animation: fadeInDown 2s ease-out;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.7em;
+      margin: 30px auto 20px;
+      max-width: 600px;
+      color: #7e3a4e;
+      animation: fadeInUp 2.5s ease-out;
+    }
+
+    .main-message {
+      max-width: 650px;
+      margin: 40px auto 30px;
+      font-size: 1.4em;
+      line-height: 1.7;
+      animation: fadeInUp 3s ease-out;
+    }
+
+    img {
+      width: 85%;
+      max-width: 420px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      margin: 30px 0;
+      animation: fadeInUp 3s ease-out;
+    }
+
+    .song-link {
+      display: inline-block;
+      margin: 10px 10px 0;
+      padding: 14px 26px;
+      background-color: #e99ab2;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background 0.3s;
+      animation: fadeInUp 3.5s ease-out;
+    }
+
+    .song-link:hover {
+      background-color: #d87c9f;
+    }
+
+    .footer {
+      font-size: 0.7em;
+      margin-top: 50px;
+      color: #b98c9c;
+      opacity: 0.5;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      position: fixed;
+      top: -50px;
+      color: #f06292;
+      font-size: 20px;
+      animation: fall 7s linear infinite;
+      user-select: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Dulce del Día 🍬</h1>
+
+  <div class="quote">"Eres como el oxígeno en el mundo. Yo soy un mundo."</div>
+
+  <div class="main-message">
+    Te adoro con todo mi corazón, amor de mi vida. <br><br>
+    Mis mejores momentos son a tu lado, son contigo. <br>
+    Eres mi mayor alegría y mi mejor compañía.
+  </div>
+
+  <img src="1000230464.jpg" alt="Foto especial">
+
+  <br><br>
+
+  <a class="song-link" href="https://youtu.be/-zxlKAR5e2w?si=X7BCPni8s1GJ54xh" target="_blank">
+    🎶 Escuchar nuestra canción
+  </a>
+
+    <div class="footer">pd: valentina</div>
+
+  <script>
+    const hearts = ["💗","💞","💘","💕"];
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 10 + 15) + "px";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>
